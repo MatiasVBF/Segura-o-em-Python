@@ -1,5 +1,5 @@
-# Seguração em Python
-Seguração em Python 
+# Seguranção em Python
+Seguranção em Python 
 🛡️ Como se Proteger
 Use antivírus atualizado: ele detecta comportamentos suspeitos.
 

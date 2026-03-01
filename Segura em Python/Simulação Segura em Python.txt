@@ -1,0 +1,69 @@
+🔐 Simulação Segura em Python
+Aqui está um exemplo de script didático que simula um programa tentando coletar informações, mas sem causar danos:
+
+
+# sim_malware.py
+# Simulação educativa de um malware simples (inofensivo)
+
+def coletar_dados():
+    # Em um malware real, aqui haveria código para capturar dados sensíveis.
+    # Nesta simulação, apenas usamos dados fictícios.
+    dados_falsos = {
+        "usuario": "teste_user",
+        "senha": "12345",
+        "email": "teste@example.com"
+    }
+    return dados_falsos
+
+def enviar_dados(dados):
+    # Em um malware real, os dados seriam enviados para um servidor malicioso.
+    # Aqui apenas imprimimos para simular.
+    print("Simulando envio de dados capturados...")
+    for chave, valor in dados.items():
+        print(f"{chave}: {valor}")
+
+if __name__ == "__main__":
+    dados = coletar_dados()
+    enviar_dados(dados)
+
+
+
+Esse script não captura nada de verdade, apenas mostra como seria a lógica de coleta e envio.
+
+
+
+🧪 Arquivo de Teste
+Você pode criar um arquivo de teste para verificar se o "malware" funciona como esperado:
+
+
+
+
+
+# test_sim_malware.py
+import sim_malware
+
+def test_coletar_dados():
+    dados = sim_malware.coletar_dados()
+    assert "usuario" in dados
+    assert "senha" in dados
+    assert "email" in dados
+
+def test_enviar_dados(capsys):
+    dados = {"usuario": "abc", "senha": "xyz", "email": "abc@xyz.com"}
+    sim_malware.enviar_dados(dados)
+    captured = capsys.readouterr()
+    assert "Simulando envio de dados capturados..." in captured.out
+
+
+
+
+🛡️ Como se Proteger
+Use antivírus atualizado: ele detecta comportamentos suspeitos.
+
+Não baixe arquivos de fontes desconhecidas.
+
+Desconfie de anexos em e-mails.
+
+Mantenha o sistema e programas atualizados.
+
+Use senhas fortes e autenticação em dois fatores.
